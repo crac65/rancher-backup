@@ -1,15 +1,27 @@
  
 # copy tar file to PVC dir form server and dir in pv-1.yml
  
-kubectl create -f storageClass.yaml #not 100% if neded yet
+kubectl create -f storageClass.yaml #**not neded yif you already have**
+
 kubectl create -f pv-1.yml
+
 #kubectl create -f pvc-claim.yml   #not needed after update.. to values-rancher-backup.yaml
+
 kubectl create -f pod.yml  #to copy back file to and then remove. not needed
+
 kubectl get pod -owide   # check location, just for checking
+
 kubectl describe pod pod-storage #just to test if file is there
+
 kubectl exec -it pod-storage -- sh # check location, just for checking
+
 cd /test1 # check location, just for checking
+
 ls # check location, just for checking./2
+
+
+# next
+
  
  
 helm repo add rancher-charts https://charts.rancher.io
