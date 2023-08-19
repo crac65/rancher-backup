@@ -1,1 +1,1 @@
-**info**
+<strong>bold text</strong>
