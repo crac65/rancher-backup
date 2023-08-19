@@ -1,5 +1,5 @@
  
-#copy tar file to PVC dir form server and dir in pv-1.yml
+# copy tar file to PVC dir form server and dir in pv-1.yml
  
 kubectl create -f storageClass.yaml #not 100% if neded yet
 kubectl create -f pv-1.yml
