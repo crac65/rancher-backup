@@ -1,1 +1,1 @@
-<strong>bold text</strong>
+**bold text**
