@@ -40,7 +40,7 @@ kubectl apply -f restore-migration.yaml
 kubectl logs -n cattle-resources-system --tail 100 -f -l app.kubernetes.io/instance=rancher-backup
 kubectl get restore
 NAME              BACKUP-SOURCE   BACKUP-FILE                                                                    AGE   STATUS
-restore-default   PV              backuptest1-3de624c9-9b1b-48f7-a507-a9e802f109b0-2023-08-01T11-00-33Z.tar.gz   16h   Completed
+restore-default   PV              backuptest1-3de624c9-xxx-48f7-a507-a9e802f109b0-2023-08-01T11-00-33Z.tar.gz   16h   Completed
  
 #kubectl delete -f restore-migration.yaml
 #kubectl describe Restore
