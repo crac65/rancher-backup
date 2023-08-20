@@ -20,6 +20,6 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - juju-c84850-010-2-k8-cluster-10   #node name to mount to.
+          - 343-k8-cluster-10   #node name to mount to.
  
  
