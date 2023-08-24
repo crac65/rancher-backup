@@ -105,8 +105,10 @@ kubectl describe Restore
 
 kubectl create namespace cattle-system
 
+```diff
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=backup.test1 \
   --set bootstrapPassword=admin \
   --set global.cattle.psp.enabled=false
+```
