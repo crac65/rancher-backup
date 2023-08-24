@@ -74,18 +74,14 @@ kubectl exec -i backup-etcd -n default -- cat /var/lib/rancher/rke2/server/db/sn
 
 tar -czvf xxxx.tar.zip etcd*
  
-#del pod
+# del pod
+
 kubectl delete pods backup-etcd
- 
- 
+
 #   End   
 
-# 
- 
 
-#    Restore                                  
-
-#    as above but replace the following lines 
+#  Restore, smae steps above apart for steps A+B 
  
 # B - change this line uncompress
 
@@ -95,6 +91,4 @@ tar -xzvf  $BACKUP_FILE
 
 cat $BACKUP_FILE | kubectl exec -i  backup-etcd -n default -- tee /var/lib/rancher/rke2/server/db/snapshots/$BACKUP_FILE >/dev/null
 
-#next ???
- 
 # **********  End     **************
