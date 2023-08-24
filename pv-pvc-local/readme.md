@@ -1,3 +1,4 @@
+# backup rancher managemnt server i.e. backup.test1   (not the name of the server, the url of the rancher cluster you pick)
  
 # copy tar file to PVC dir form server and dir in pv-1.yml
  
@@ -26,7 +27,7 @@ cd /test1 # check location, just for checking
 ls 
 
 
-# restore to server of the same name i.e.  1.server.me
+# restore to server of the same name i.e.  backup.test1
 
  
  
