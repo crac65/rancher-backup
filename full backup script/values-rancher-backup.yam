@@ -1,0 +1,14 @@
+affinity: {}
+noProxy: 127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
+nodeSelector: {}
+persistence:
+  enabled: true  # must be true to set DEFAULT_PERSISTENCE_ENABLED env var
+                 # that activates the controller's PV/PVC support
+  size: 2Gi
+  storageClass: local-storage
+  volumeName: pv-volume-2  # must match the name of the PV to be read; the
+                           # chart will create a corresponding PVC
+serviceAccount:
+  annotations: {}
+tolerations: []
+trace: false
