@@ -5,9 +5,8 @@ kubectl create -f storageClass.yaml #**not neded yif you already have**
 
 kubectl create -f pv-1.yml
 
-#kubectl create -f pvc-claim.yml   #not needed after update.. to values-rancher-backup.yaml
-
-kubectl create -f pod.yml  #to copy back file to and then remove. not needed
+# to test bu ssh into pod, not needed. But heplfull
+# kubectl create -f pod.yml  #to copy back file to and then remove. not needed
 
 # ##backup in rancher gui. selevt the pcv you made and localdisk in options.
 
