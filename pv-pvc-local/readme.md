@@ -17,16 +17,16 @@ kubectl create -f pod.yml  #to copy back file to and then remove. not needed
 
 kubectl get pod -owide   # check location, just for checking
 
-kubectl describe pod pod-storage #just to test if file is there
+kubectl describe pod pod-storage-name #just to test if file is there
 
-kubectl exec -it pod-storage -- sh # check location, just for checking
+kubectl exec -it pod-storage-name -- sh # check location, just for checking
 
 cd /test1 # check location, just for checking
 
 ls 
 
 
-# next
+# restore to server of the same name i.e.  1.server.me
 
  
  
