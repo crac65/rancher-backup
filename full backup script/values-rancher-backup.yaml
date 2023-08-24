@@ -1,0 +1,35 @@
+affinity: {}
+debug: false
+global:
+  cattle:
+    psp:
+      enabled: false
+  kubectl:
+    repository: rancher/kubectl
+    tag: v1.21.9
+image:
+  repository: rancher/backup-restore-operator
+  tag: v3.1.0
+imagePullPolicy: Always
+imagePullSecrets: []
+noProxy: 127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local
+nodeSelector: {}
+persistence:
+  enabled: true
+  size: 2Gi
+  storageClass: caas-cinder
+priorityClassName: ''
+s3:
+  bucketName: ''
+  credentialSecretName: ''
+  credentialSecretNamespace: ''
+  enabled: false
+  endpoint: ''
+  endpointCA: ''
+  folder: ''
+  insecureTLSSkipVerify: false
+  region: ''
+serviceAccount:
+  annotations: {}
+tolerations: []
+trace: false
