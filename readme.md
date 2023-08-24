@@ -1,6 +1,6 @@
-# Rancher pvc etc backup scrips
+# Rancher pvc etc backup scrips, more for refrance than full copy.
 
-# script to backup and copy rancher managemnet server and etcd without gui.
+# The scripts can backup and copy rancher managemnet server and etcd without gui.
 
 ## read me in dir's
 
