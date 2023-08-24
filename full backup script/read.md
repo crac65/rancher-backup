@@ -15,6 +15,8 @@ caas-cinder (default)   cinder.csi.openstack.org   Delete          Immediate    
  
 # Backup Script
 
+# Add Helm repo
+
 helm repo add rancher-chart https://charts.rancher.io
 
 helm repo update
