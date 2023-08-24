@@ -6,6 +6,7 @@
 kubectl get storageclasses.storage.k8s.io
 
 NAME                    PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+
 caas-cinder (default)   cinder.csi.openstack.org   Delete          Immediate           false                  77d
 
 **2, unsupported-storage-drivers may need enabled - GlobalSettings/featureFlags/unsupported-storage-drivers in rancher gui**
@@ -23,6 +24,7 @@ helm repo update
 helm install rancher-backup-crd rancher-chart/rancher-backup-crd -n cattle-resources-system --create-namespace
 
 helm install rancher-backup rancher-chart/rancher-backup -n cattle-resources-system  --values=./values-rancher-backup.yaml
+
 # run backup and copy files to pwd 
 
 kubectl apply -f ./testbackup.yaml
