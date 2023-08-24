@@ -1,8 +1,13 @@
+$${\color{blue}Rancher}$$
+
 # Rancher pvc etc backup scrips, more for refrance than full copy.
 
-# The scripts can backup and copy rancher managemnet server and etcd without gui.
+$\Large{\color{blue}{Rancher \ pvc \ etc \ backup \ scrips \ , \ more \ for \ refrance \ }}$
 
-## read me in dir's
+
+```diff
++ The scripts can backup and copy rancher managemnet server and etcd without gui.
+- Read the readme.md in each dir's fir scipt.
 
 ### etcd backup for clusters
 backup etcd on clusters
