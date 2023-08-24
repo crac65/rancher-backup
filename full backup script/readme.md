@@ -80,25 +80,17 @@ BACKUP_FILE=testbackup-3de624c9-9b1b-48f7-a507-a9e802f109b0-2023-08-10T09-52-16Z
 cat $BACKUP_FILE | kubectl exec -i $BACKUP_POD -n $ns -- tee /var/lib/backups/$BACKUP_FILE >/dev/null
 
 # create restore-migration.yaml file, with backup file name within.
-
+```diff
 cat << EOF > restore-migration.yaml
-
 apiVersion: resources.cattle.io/v1
-
 kind: Restore
-
 metadata:
-
   name: restore-default
-  
 spec:
-
   backupFilename: $BACKUP_POD 
-  
-  storageLocation: null
-  
+  storageLocation: null  
 EOF
-
+```
 # run restore command for rancher backup operator
 
 kubectl apply -f restore-migration.yaml
