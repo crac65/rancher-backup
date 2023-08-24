@@ -1,11 +1,13 @@
-# Note..  ## Etcd backup Rancher for just one cluster, if you have two or more clusters. You will need to check names on rancher management cluster local dir /var/lib/rancher/rke2/server/db/snapshots/ . Then update script if each cluster or add a loop to this script.
+# BACKUP Rancher etcd
+
+
+**Note.. Etcd backup Rancher for just one cluster, if you have two or more clusters. You will need to check names on rancher management cluster local dir /var/lib/rancher/rke2/server/db/snapshots/ . Then update script if each cluster or add a loop to this script.**
 
 
 # prerequisite 
  
 **check etcd backup is running. It should be running as default on new rke2 managemnt cluster, backing up all servers.**
  
-# BACKUP 
  
 # get one ETCD server
 ETCD_SERVERS=`kubectl get nodes -o wide | grep etcd | awk '{print $1;}' |tail --lines=1` 
