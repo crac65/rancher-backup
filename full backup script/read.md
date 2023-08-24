@@ -109,7 +109,7 @@ kubectl delete -f restore-migration.yaml
 
 kubectl describe Restore
 
-#Install rancher
+# Install rancher
 
 kubectl create namespace cattle-system
 
