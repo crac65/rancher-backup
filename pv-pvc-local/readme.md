@@ -6,11 +6,13 @@ kubectl create -f storageClass.yaml #**not neded yif you already have**
 kubectl create -f pv-1.yml
 
 # to test bu ssh into pod, not needed. But heplfull
+
 # kubectl create -f pod.yml  #to copy back file to and then remove. not needed
 
 # ##backup in rancher gui. selevt the pcv you made and localdisk in options.
 
 #  location, check node name to add to yaml file.
+
 kubectl get pod -owide   # check location, just for checking
 
 kubectl describe pod pod-storage #just to test if file is there
@@ -27,6 +29,7 @@ ls # check location, just for checking./2
  
  
 helm repo add rancher-charts https://charts.rancher.io
+
 helm repo update
  
  
@@ -39,12 +42,17 @@ helm install rancher-backup-crd rancher-charts/rancher-backup-crd -n cattle-reso
 helm install rancher-backup rancher-charts/rancher-backup -n cattle-resources-system --values=./values-rancher-backup.yaml  --version $CHART_VERSION
  
 kubectl apply -f restore-migration.yaml
+
 kubectl logs -n cattle-resources-system --tail 100 -f -l app.kubernetes.io/instance=rancher-backup
+
 kubectl get restore
+
 NAME              BACKUP-SOURCE   BACKUP-FILE                                                                    AGE   STATUS
+
 restore-default   PV              backuptest1-3de624c9-xxx-48f7-a507-a9e802f109b0-2023-08-01T11-00-33Z.tar.gz   16h   Completed
  
 #kubectl delete -f restore-migration.yaml
+
 #kubectl describe Restore
  
  
