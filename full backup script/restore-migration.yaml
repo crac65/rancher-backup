@@ -1,0 +1,10 @@
+apiVersion: resources.cattle.io/v1
+kind: Restore
+metadata:
+  name: restore-default
+spec:
+  # path to the restore tarball relative to the root of the PV being read;
+  # removed '/test/' prefix because that's only visible to the local storage
+  # CSI and StorageClass pointing to the local directory on the host
+  backupFilename: backuptest1-3de624c9-9b1b-48f7-a507-a9e802f109b0-2023-08-01T11-00-33Z.tar.gz
+  storageLocation: null
