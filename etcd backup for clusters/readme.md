@@ -15,6 +15,7 @@ ETCD_SERVERS=`kubectl get nodes -o wide | grep etcd | awk '{print $1;}' |tail --
 cat << EOF > backup-etcd-pod.yaml
 
 apiVersion: v1
+
 kind: Pod
 
 metadata:
