@@ -16,6 +16,7 @@ ETCD_SERVERS=`kubectl get nodes -o wide | grep etcd | awk '{print $1;}' |tail --
  
 # create script to create pod that has access to local files. i.e. /var/lib/rancher/rke2/server/db/snapshots/etcd*
 
+```diff
 cat << EOF > backup-etcd-pod.yaml
 
 apiVersion: v1
@@ -57,6 +58,8 @@ spec:
         path: /var/lib/rancher/rke2/server/db/snapshots
         
 EOF
+
+```
  
 # install pod to link to local dir on ETCD node
 
