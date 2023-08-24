@@ -37,11 +37,11 @@ BACKUP_FILE=`kubectl exec -i $BACKUP_POD -n cattle-resources-system -- ls -ltr /
 
 kubectl exec -i $BACKUP_POD -n cattle-resources-system -- cat /var/lib/backups/$BACKUP_FILE >  $BACKUP_FILE
 
-# etcd backup file in on etcd node @
+# FYI - etcd backup file  on etcd node's @
 
 **files  = /var/lib/rancher/rke2/server/db/snapshots/etcd-snapshot-testback1-pool1-840ccb63-bj6hc-1691496000**
  
-# Restore Script
+# Restore Script onto new server, must have the same name  i.e.  my.server.work
 
 **extra Prerequisites, have the backup file ready for your variable path setting.**
 
