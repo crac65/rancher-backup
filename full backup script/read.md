@@ -1,7 +1,7 @@
 
  
 # Prerequisites
-**1, cinder (or other) storage as default.**
+**1, cinder for openstack (or other) storage as default.**
 
 kubectl get storageclasses.storage.k8s.io
 
@@ -43,17 +43,17 @@ kubectl exec -i $BACKUP_POD -n cattle-resources-system -- cat /var/lib/backups/$
  
 # Restore Script onto new server, must have the same name  i.e.  my.server.work
 
-**extra Prerequisites, have the backup file ready for your variable path setting.**
+** Prerequisites, have the backup file ready. to addd to variable.**
 
 **i.e. BACKUP_FILE=testbackup-3de624c9-9b1b-48f7-a507-a9e802f109b0-2023-08-10T09-52-16Z.tar.gz**
 
-**Go**
+# add helm repo
 
 helm repo add rancher-chart https://charts.rancher.io
 
 helm repo update
 
-# check cinder is available, else create
+# check default storage (i.e cinder) is available, else create
 
 kubectl get storageclasses.storage.k8s.io 
 
