@@ -1,12 +1,11 @@
-# ************  etcd  backup *************
+#   etcd  backup Rancher
 
  
-# ***** prerequisite *****
+#  prerequisite 
  
 #check etcd backup is running, should be as default on new rke2 cluster.
  
-# *************************************
-# ***********   BACKUP *****************
+# BACKUP 
  
 # get one ETCD server
 ETCD_SERVERS=`kubectl get nodes -o wide | grep etcd | awk '{print $1;}' |tail --lines=1` 
@@ -75,16 +74,14 @@ tar -czvf xxxx.tar.zip etcd*
 kubectl delete pods backup-etcd
  
  
-# **********  End   **************************
+#   End   
 
-# *********************************************
+# 
  
- 
-# *************************************************************
 
-# ***********   Restore                                  *****
+#    Restore                                  
 
-# ***********   as above but replace the following lines *****
+#    as above but replace the following lines 
  
 # B - change this line uncompress
 
