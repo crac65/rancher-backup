@@ -9,6 +9,9 @@ kubectl create -f pv-1.yml
 
 kubectl create -f pod.yml  #to copy back file to and then remove. not needed
 
+# ##backup in rancher gui. selevt the pcv you made and localdisk in options.
+
+#  location, check node name to add to yaml file.
 kubectl get pod -owide   # check location, just for checking
 
 kubectl describe pod pod-storage #just to test if file is there
