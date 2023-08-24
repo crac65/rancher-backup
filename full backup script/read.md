@@ -80,12 +80,19 @@ cat $BACKUP_FILE | kubectl exec -i $BACKUP_POD -n $ns -- tee /var/lib/backups/$B
 cat << EOF > restore-migration.yaml
 
 apiVersion: resources.cattle.io/v1
+
 kind: Restore
+
 metadata:
+
   name: restore-default
+  
 spec:
+
   backupFilename: $BACKUP_POD 
+  
   storageLocation: null
+  
 EOF
 
 # run restore command for rancher backup operator
