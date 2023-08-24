@@ -79,9 +79,10 @@ tar -czvf xxxx.tar.zip etcd*
 kubectl delete pods backup-etcd
 
 #   End   
+#
+#
 
-
-#  Restore, smae steps above apart for steps A+B 
+#  Restore, same steps above apart for steps A+B 
  
 # B - change this line uncompress
 
