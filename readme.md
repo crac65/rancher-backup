@@ -5,7 +5,6 @@
 <h3 style="color:#ff0000">The scripts can backup and copy rancher managemnet server and etcd (backup files) without gui.</h3>
 
 ```diff
-+ The scripts can backup and copy rancher managemnet server and etcd without gui.
 - Read the readme.md in each dir's fir scipt.
 
 ### etcd backup for clusters
