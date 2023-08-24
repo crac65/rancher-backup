@@ -1,6 +1,6 @@
-**backup rancher managemnt server i.e. backup.test1   (not the name of the server, the url of the rancher cluster you pick)**
+#  backup rancher managemnt server i.e. backup.test1   (not the name of the server, the url of the rancher cluster you pick)
  
-# This will copy backup.tar file to PVC dir form the rancher server and dir in pv-1.yml
+**This will copy backup.tar file to PVC dir form the rancher server and dir in pv-1.yml**
  
 kubectl create -f storageClass.yaml #**not neded yif you already have**
 
@@ -8,13 +8,13 @@ kubectl create -f storageClass.yaml #**not neded yif you already have**
 
 kubectl create -f pv-1.yml
 
-# to test bu ssh into pod, not needed. But heplfull
+**to test bu ssh into pod, not needed. But heplfull**
 
 kubectl create -f pod.yml  #to copy back file to and then remove. not needed
 
 # ##in rancher gui. create a backup and select the pcv you made and localdisk in options.
 
-#  location, check node name to add to yaml file.
+**location, check node name to add to yaml file.**
 
 kubectl get pod -owide   # check location, just for checking
 
