@@ -3,6 +3,8 @@
  
 kubectl create -f storageClass.yaml #**not neded yif you already have**
 
+# update with a node you would like to same to local disks. i.e. 343-k8-cluster-10 
+
 kubectl create -f pv-1.yml
 
 # to test bu ssh into pod, not needed. But heplfull
