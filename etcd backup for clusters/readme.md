@@ -1,7 +1,9 @@
 # BACKUP Rancher etcd
 
 
-**Note.. Etcd backup Rancher for just one cluster, if you have two or more clusters. You will need to check names on rancher management cluster local dir /var/lib/rancher/rke2/server/db/snapshots/ . Then update script if each cluster or add a loop to this script.**
+**Note.. Rancher backup to Etcd (snapshout in rancher language) to a local dir.**
+
+**This backup Rancher for just one cluster, if you have two or more clusters. You will need to check names on rancher management cluster local dir /var/lib/rancher/rke2/server/db/snapshots/ . Then update script if each cluster or add a loop to this script.**
 
 
 # prerequisite 
