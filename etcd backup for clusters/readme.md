@@ -49,8 +49,9 @@ kubectl apply -f backup-etcd-pod.yaml
  
 # find and copy file for pod to local Dir
 
+```diff
 BACKUP_FILE=`kubectl exec -i backup-etcd -n default -- ls -ltr /var/lib/rancher/rke2/server/db/snapshots/ | grep etcd | tail --lines=1 | awk '{print $(NF)}'`
-
+```
 # A - copy file form pod
 
 kubectl exec -i backup-etcd -n default -- cat /var/lib/rancher/rke2/server/db/snapshots/$BACKUP_FILE >  $BACKUP_FILE
