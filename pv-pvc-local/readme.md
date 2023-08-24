@@ -1,10 +1,10 @@
-# backup rancher managemnt server i.e. backup.test1   (not the name of the server, the url of the rancher cluster you pick)
+**backup rancher managemnt server i.e. backup.test1   (not the name of the server, the url of the rancher cluster you pick)**
  
-# copy tar file to PVC dir form server and dir in pv-1.yml
+# This will copy backup.tar file to PVC dir form the rancher server and dir in pv-1.yml
  
 kubectl create -f storageClass.yaml #**not neded yif you already have**
 
-# update with a node you would like to same to local disks. i.e. 343-k8-cluster-10 
+**update with a node you would like to same to local disks. i.e. 343-k8-cluster-10** 
 
 kubectl create -f pv-1.yml
 
