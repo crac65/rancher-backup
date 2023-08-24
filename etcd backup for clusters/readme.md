@@ -18,45 +18,27 @@ ETCD_SERVERS=`kubectl get nodes -o wide | grep etcd | awk '{print $1;}' |tail --
 
 ```diff
 cat << EOF > backup-etcd-pod.yaml
-
 apiVersion: v1
-
 kind: Pod
-
 metadata:
-
   name: backup-etcd
-  
   labels:
-  
     env: test
-    
 spec:
-
   nodeName: $ETCD_SERVERS
-  
   containers:
-  
   - name: nginx
   - 
     image: nginx
-    
     imagePullPolicy: IfNotPresent
-    
     volumeMounts:
-    
       - name: my-volume
       - 
         mountPath: /var/lib/rancher/rke2/server/db/snapshots
-        
   volumes:
-  
     - name: my-volume
-    
       hostPath:
-      
         path: /var/lib/rancher/rke2/server/db/snapshots
-        
 EOF
 
 ```
