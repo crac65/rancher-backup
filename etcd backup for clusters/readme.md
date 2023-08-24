@@ -1,8 +1,8 @@
-#   Etcd backup Rancher for just one cluster, if you have two or more clusters. You will need to check names in rancher management cluster local dir /var/lib/rancher/rke2/server/db/snapshots/ amd have a script if each or add a loop to this.
+**Etcd backup Rancher for just one cluster, if you have two or more clusters. You will need to check names in rancher management cluster local dir /var/lib/rancher/rke2/server/db/snapshots/ amd have a script if each or add a loop to this.**
 
 
 
-#prerequisite 
+# prerequisite 
  
 **check etcd backup is running. It should be running as default on new rke2 managemnt cluster, backing up all servers.**
  
