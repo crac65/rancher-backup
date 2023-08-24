@@ -9,7 +9,7 @@ NAME                    PROVISIONER                RECLAIMPOLICY   VOLUMEBINDING
 
 caas-cinder (default)   cinder.csi.openstack.org   Delete          Immediate           false                  77d
 
-**2, unsupported-storage-drivers may need enabled in**  GlobalSettings/featureFlags/unsupported-storage-drivers in rancher gui
+**2, unsupported-storage-drivers may need enabled in**  GlobalSettings/featureFlags/unsupported-storage-drivers in **rancher gui**
 
 **3, kubectl connection to the local management rancher server via $KUBECONFIG**
  
